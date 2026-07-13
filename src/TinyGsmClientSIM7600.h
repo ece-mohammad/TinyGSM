@@ -350,7 +350,7 @@ class TinyGsmSim7600 : public TinyGsmModem<TinyGsmSim7600>,
 
     // Configure timeouts for opening and closing sockets
     // AT+CIPTIMEOUT=<netopen_timeout> <cipopen_timeout>, <cipsend_timeout>
-    sendAT(GF("+CIPTIMEOUT="), TINY_GSM_NETOPEN_TIMEOUT_MS, ',', TINY_GSM_CIPOPEN_TIMEOUT_MS, ',', TINY_GSM_TCP_TX_TIMEOUT_MS);
+    sendAT(GF("+CIPTIMEOUT="), TINY_GSM_NETOPEN_TIMEOUT_MS, ',', TINY_GSM_CIPOPEN_TIMEOUT_MS, ',', TINY_GSM_CIPSEND_TIMEOUT_MS);
     waitResponse();
 
     // Start the socket service
